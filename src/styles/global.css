@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-orange: #f66136;
+  --color-brand-black: #111111;
+  --font-heading: "Teko", sans-serif;
+  --font-sans: "Poppins", sans-serif;
+}

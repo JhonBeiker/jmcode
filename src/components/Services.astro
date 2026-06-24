@@ -1,0 +1,50 @@
+---
+import { services } from '../data/services.js';
+---
+
+<section id="servicios" class="px-4 py-20 sm:px-6 lg:px-8 dark:bg-brand-black">
+	<div class="mx-auto max-w-6xl">
+		<h2 class="font-heading text-center text-4xl font-bold uppercase text-brand-black sm:text-5xl dark:text-white">
+			Nuestros <span class="text-brand-orange">Servicios</span>
+		</h2>
+
+		<div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+			{services.map((service) => (
+				<article class="rounded-lg border border-brand-black/10 p-6 shadow-sm dark:border-white/10">
+					<div class="flex h-12 w-12 items-center justify-center rounded-md bg-brand-orange/10 text-brand-orange">
+						{service.icon === 'apps' && (
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6">
+								<rect x="7" y="2" width="10" height="20" rx="2" />
+								<line x1="7" y1="18" x2="17" y2="18" />
+							</svg>
+						)}
+						{service.icon === 'web' && (
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6">
+								<circle cx="12" cy="12" r="9" />
+								<ellipse cx="12" cy="12" rx="4" ry="9" />
+								<line x1="3" y1="12" x2="21" y2="12" />
+							</svg>
+						)}
+						{service.icon === 'systems' && (
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-6 w-6">
+								<rect x="3" y="4" width="18" height="6" rx="1" />
+								<rect x="3" y="14" width="18" height="6" rx="1" />
+								<line x1="6.5" y1="7" x2="6.5" y2="7" stroke-width="2" stroke-linecap="round" />
+								<line x1="6.5" y1="17" x2="6.5" y2="17" stroke-width="2" stroke-linecap="round" />
+							</svg>
+						)}
+					</div>
+
+					<h3 class="mt-4 font-heading text-2xl font-bold text-brand-black dark:text-white">{service.title}</h3>
+					<p class="mt-2 font-sans text-brand-black/80 dark:text-white/80">{service.description}</p>
+
+					<ul class="mt-4 space-y-1 font-sans text-sm text-brand-black/60 dark:text-white/60">
+						{service.examples.map((example) => (
+							<li>• {example}</li>
+						))}
+					</ul>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
