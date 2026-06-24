@@ -1,6 +1,6 @@
 # SPEC 01 — MVP Landing Page JMcode
 
-> **Status:** Draft · **Depends on:** Ninguno (primer spec del proyecto) · **Date:** 2026-06-23
+> **Status:** Aprovado · **Depends on:** Ninguno (primer spec del proyecto) · **Date:** 2026-06-23
 > **Objective:** Construir el MVP de la landing page de JMcode (header, hero, servicios, sobre nosotros, contacto vía WhatsApp y footer) con Astro y Tailwind, aplicando la identidad de marca y usando contenido placeholder donde aún no hay contenido real.
 
 ## Scope
