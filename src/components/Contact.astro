@@ -34,11 +34,11 @@ import { services } from '../data/services.js';
 					required
 					class="mt-1 w-full rounded-md border border-brand-black/20 px-3 py-2 font-sans focus:border-brand-orange focus:outline-none dark:border-white/20 dark:bg-white/5 dark:text-white"
 				>
-					<option value="" disabled selected>Selecciona un servicio</option>
+					<option value="" disabled selected class="text-brand-black dark:bg-brand-black dark:text-white">Selecciona un servicio</option>
 					{services.map((service) => (
-						<option value={service.title}>{service.title}</option>
+						<option value={service.title} class="text-brand-black dark:bg-brand-black dark:text-white">{service.title}</option>
 					))}
-					<option value="Otro">Otro</option>
+					<option value="Otro" class="text-brand-black dark:bg-brand-black dark:text-white">Otro</option>
 				</select>
 			</div>
 
